@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { Menu, X, ArrowRight } from "lucide-react";
+import { Menu, X, ArrowRight, LogIn } from "lucide-react";
 import { siteConfig } from "@/lib/site-config";
 
 const NAV_LINKS = [
@@ -36,7 +36,16 @@ export default function Header() {
           ))}
         </nav>
 
-        <div className="hidden lg:flex">
+        <div className="hidden items-center gap-3 lg:flex">
+          <a
+            href={siteConfig.cockpitUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-1.5 text-sm font-medium text-navy-500 transition-colors hover:text-navy-800"
+          >
+            <LogIn className="h-4 w-4" />
+            Connexion
+          </a>
           <a
             href="#contact"
             className="inline-flex items-center gap-2 rounded-lg bg-accent-500 px-4 py-2.5 text-sm font-semibold text-white shadow-card transition-colors hover:bg-accent-600"
@@ -77,6 +86,16 @@ export default function Header() {
             >
               Étudier mon prochain envoi
               <ArrowRight className="h-4 w-4" />
+            </a>
+            <a
+              href={siteConfig.cockpitUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={() => setOpen(false)}
+              className="inline-flex items-center justify-center gap-1.5 rounded-lg px-4 py-2.5 text-sm font-medium text-navy-500"
+            >
+              <LogIn className="h-4 w-4" />
+              Connexion
             </a>
           </div>
         </div>

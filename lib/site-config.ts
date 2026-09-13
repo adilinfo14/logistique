@@ -3,7 +3,7 @@
 
 export const siteConfig = {
   brand: "LogiRelais",
-  tagline: "Votre relais logistique entre la France et le Maroc",
+  tagline: "Accompagnement logistique France ↔ Maroc",
   url: "https://logistique.noschoixpourvous.com",
   email: "contact@logirelais.fr", // TODO
   phone: "+33 6 00 00 00 00", // TODO
@@ -13,6 +13,11 @@ export const siteConfig = {
     "Bonjour, je souhaite faire analyser un flux de marchandises entre la France et le Maroc.",
   address: "France & Maroc", // TODO: préciser les villes si besoin (ex: Lyon / Casablanca)
   linkedin: "", // TODO: URL LinkedIn si disponible
+  // Accès au cockpit interne (outil de gestion des dossiers/prestataires).
+  // TODO: remplacer par l'URL définitive une fois le cockpit déployé de façon permanente
+  // (actuellement un tunnel Cloudflare temporaire vers la machine locale — casse si le
+  // tunnel ou la machine s'arrête).
+  cockpitUrl: "https://consumer-front-rescue-interstate.trycloudflare.com/login",
 };
 
 export const whatsappHref = (message?: string) => {

@@ -1,5 +1,5 @@
-import { Mail, Phone, ArrowRight } from "lucide-react";
-import { siteConfig } from "@/lib/site-config";
+import { Mail, Phone, MessageCircle, ArrowRight } from "lucide-react";
+import { siteConfig, whatsappHref } from "@/lib/site-config";
 
 export default function Footer() {
   const year = new Date().getFullYear();
@@ -16,6 +16,13 @@ export default function Footer() {
               {siteConfig.brand}
             </span>
             <p className="text-sm leading-relaxed text-navy-400">{siteConfig.tagline}.</p>
+            <p className="text-sm leading-relaxed text-navy-400">
+              Comprendre votre besoin.
+              <br />
+              Trouver les bons interlocuteurs.
+              <br />
+              Faire avancer votre dossier.
+            </p>
           </div>
 
           <div className="flex flex-col gap-3 text-sm">
@@ -26,6 +33,10 @@ export default function Footer() {
             <a href={`tel:${siteConfig.phone.replace(/\s+/g, "")}`} className="flex items-center gap-2 hover:text-white">
               <Phone className="h-4 w-4" />
               {siteConfig.phone}
+            </a>
+            <a href={whatsappHref()} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 hover:text-white">
+              <MessageCircle className="h-4 w-4" />
+              WhatsApp
             </a>
             <a href="#contact" className="flex items-center gap-2 font-semibold text-accent-400 hover:text-accent-300">
               Étudier mon prochain envoi
@@ -39,8 +50,8 @@ export default function Footer() {
             © {year} {siteConfig.brand}. Tous droits réservés.
           </p>
           <p>
-            {siteConfig.brand} n&apos;effectue aucune opération de transport ni de dédouanement
-            réglementée — nous orientons et coordonnons uniquement.
+            Les opérations de transport, de transit et de dédouanement sont réalisées par les
+            professionnels habilités concernés.
           </p>
         </div>
       </div>

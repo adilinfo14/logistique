@@ -4,27 +4,27 @@ import SectionHeading from "./SectionHeading";
 const SERVICES = [
   {
     icon: Compass,
-    title: "Diagnostic logistique de flux",
+    title: "Comprendre votre besoin",
     description:
-      "Nous analysons votre flux France–Maroc (volumes, nature des marchandises, contraintes) et identifions la solution logistique la plus pertinente.",
+      "Nature de la marchandise, volume, destination, délai, fréquence, contraintes particulières : nous faisons d'abord le point sur votre flux.",
   },
   {
     icon: Network,
-    title: "Recherche & mise en relation transporteurs",
+    title: "Identifier les bons interlocuteurs",
     description:
-      "Nous mobilisons notre réseau pour vous mettre en relation avec des transporteurs adaptés à votre trafic — sans engagement de notre part sur le transport.",
+      "Transporteur, transitaire, spécialiste douane, stockage ou livraison locale : je recherche les professionnels correspondant à votre besoin.",
   },
   {
     icon: FileCheck2,
-    title: "Assistance documentaire import-export",
+    title: "Préparer votre dossier",
     description:
-      "Nous vous accompagnons dans la préparation et la vérification de vos documents douaniers et commerciaux, pour fluidifier vos passages en douane.",
+      "Je vous aide à identifier les documents et informations nécessaires pour éviter les mauvaises surprises au moment de l'expédition.",
   },
   {
     icon: Radar,
-    title: "Coordination & suivi d'expédition",
+    title: "Garder une vision claire du dossier",
     description:
-      "Un interlocuteur unique qui coordonne les intervenants et suit votre expédition de bout en bout, jusqu'à la livraison finale.",
+      "Lorsque plusieurs intervenants sont nécessaires, je vous aide à suivre les différentes étapes et à savoir qui fait quoi.",
   },
 ];
 
@@ -33,9 +33,9 @@ export default function Services() {
     <section id="services" className="bg-white py-20 sm:py-24">
       <div className="section flex flex-col gap-12">
         <SectionHeading
-          kicker="Ce que nous faisons"
-          title="Un relais logistique, pas un transporteur de plus"
-          description="Nous ne possédons ni camions ni entrepôts : notre valeur, c'est de structurer, sécuriser et coordonner vos flux France–Maroc en s'appuyant sur les bons partenaires."
+          kicker="Ma méthode"
+          title="Un besoin logistique commence rarement par un camion"
+          description="Avant de chercher un transporteur, il faut comprendre ce que vous envoyez, où, dans quelles conditions et avec quels documents. Mon rôle est de vous aider à poser le dossier correctement, puis à identifier les professionnels capables de prendre en charge chaque étape."
         />
 
         <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4">
@@ -54,9 +54,8 @@ export default function Services() {
         </div>
 
         <p className="text-sm text-navy-500">
-          Ces prestations ne constituent ni du transport, ni du commissionnaire en douane, ni
-          toute autre opération réglementée : nous orientons et coordonnons, les opérateurs
-          agréés exécutent.
+          Les opérations de transport, de transit et de dédouanement sont réalisées par les
+          professionnels habilités concernés.
         </p>
       </div>
     </section>

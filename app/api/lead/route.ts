@@ -10,7 +10,7 @@ export async function POST(request: Request) {
     return NextResponse.json({ ok: false, error: "Corps de requête invalide" }, { status: 400 });
   }
 
-  const required = ["marchandise", "volume", "frequence", "sens", "nom", "entreprise", "email", "telephone"];
+  const required = ["depart", "destination", "marchandise", "volume", "frequence", "nom", "entreprise", "email", "telephone"];
   const missing = required.filter((key) => !body[key]);
   if (missing.length > 0) {
     return NextResponse.json(

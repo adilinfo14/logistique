@@ -1,24 +1,30 @@
-import { Building2, ShoppingCart, Ship } from "lucide-react";
+import { Building2, ShoppingCart, Ship, Globe2 } from "lucide-react";
 import SectionHeading from "./SectionHeading";
 
 const TARGETS = [
   {
     icon: Building2,
-    title: "PME",
+    title: "PME et TPE",
     description:
-      "Vous développez des échanges avec le Maroc mais n'avez pas de service logistique dédié en interne.",
+      "Vous devez envoyer ou recevoir des marchandises entre la France et le Maroc sans disposer d'une équipe logistique dédiée.",
   },
   {
     icon: ShoppingCart,
-    title: "E-commerçants",
+    title: "Entrepreneurs et e-commerçants",
     description:
-      "Vous sourcez ou expédiez des produits entre les deux pays et cherchez à fiabiliser vos délais et vos coûts.",
+      "Vous démarrez vos premiers flux et avez besoin de comprendre comment organiser correctement une expédition.",
   },
   {
     icon: Ship,
-    title: "Importateurs-exportateurs",
+    title: "Importateurs et exportateurs",
     description:
-      "Vous gérez déjà des flux réguliers et voulez un relais fiable pour sécuriser un nouveau trafic ou un nouveau partenaire.",
+      "Vous avez déjà une activité et cherchez un nouvel interlocuteur, un nouvel axe ou une solution pour un besoin particulier.",
+  },
+  {
+    icon: Globe2,
+    title: "Entreprises qui testent le marché marocain ou français",
+    description:
+      "Vous avez une première opération à réaliser et souhaitez sécuriser les étapes avant de vous engager.",
   },
 ];
 
@@ -28,11 +34,11 @@ export default function ForWho() {
       <div className="section flex flex-col gap-12">
         <SectionHeading
           kicker="Pour qui"
-          title="Conçu pour les entreprises qui échangent avec le Maroc"
-          description="Que vous démarriez un premier flux ou cherchiez à sécuriser un trafic existant, nous nous adaptons à votre niveau de maturité logistique."
+          title="Vous échangez avec le Maroc et la logistique n'est pas votre métier ?"
+          description="C'est précisément là que je peux intervenir."
         />
 
-        <div className="grid grid-cols-1 gap-5 sm:grid-cols-3">
+        <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4">
           {TARGETS.map(({ icon: Icon, title, description }) => (
             <div
               key={title}

@@ -9,9 +9,9 @@ import { siteConfig } from "@/lib/site-config";
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter", display: "swap" });
 const sora = Sora({ subsets: ["latin"], variable: "--font-sora", display: "swap" });
 
-const title = "Relais logistique France–Maroc | Diagnostic, transporteurs, suivi";
+const title = "LogiRelais | Accompagnement logistique France–Maroc";
 const description =
-  "Diagnostic de vos flux France–Maroc, mise en relation avec des transporteurs adaptés, assistance documentaire import-export et suivi d'expédition. Étudiez votre prochain envoi gratuitement.";
+  "Besoin d'organiser une expédition, une importation ou une exportation entre la France et le Maroc ? LogiRelais vous aide à clarifier votre besoin et identifier les bons interlocuteurs.";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.url),
@@ -23,10 +23,12 @@ export const metadata: Metadata = {
   keywords: [
     "logistique France Maroc",
     "transport France Maroc",
-    "import export Maroc",
-    "transitaire Maroc",
-    "diagnostic logistique",
-    "douane import export",
+    "import export France Maroc",
+    "accompagnement import Maroc",
+    "accompagnement export Maroc",
+    "transport marchandises Maroc France",
+    "transitaire France Maroc",
+    "expédition France Maroc",
   ],
   authors: [{ name: siteConfig.brand }],
   openGraph: {

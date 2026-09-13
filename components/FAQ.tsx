@@ -6,34 +6,34 @@ import SectionHeading from "./SectionHeading";
 
 const FAQS = [
   {
-    question: "Assurez-vous vous-même le transport des marchandises ?",
+    question: "Est-ce que vous êtes transporteur ?",
     answer:
-      "Non. Nous ne sommes pas transporteur : nous diagnostiquons votre flux et vous mettons en relation avec des transporteurs adaptés. Le transport physique est toujours réalisé par des opérateurs agréés, jamais par nous.",
+      "Non. Je vous aide à analyser votre besoin et à identifier les professionnels adaptés. Le transport est réalisé directement par les opérateurs habilités.",
   },
   {
-    question: "Réalisez-vous les formalités douanières à ma place ?",
+    question: "Pouvez-vous m'aider si c'est ma première importation ou exportation ?",
     answer:
-      "Nous vous assistons dans la préparation et la vérification de vos documents import-export, mais les opérations de dédouanement réglementées relèvent de commissionnaires en douane agréés. Nous vous orientons vers les bons interlocuteurs si nécessaire.",
+      "Oui. C'est même l'un des cas où cet accompagnement peut être le plus utile : nous reprenons les différentes étapes ensemble.",
   },
   {
-    question: "Le premier diagnostic est-il vraiment gratuit ?",
+    question: "Pouvez-vous trouver un transporteur pour moi ?",
     answer:
-      "Oui. La première analyse de votre flux (faisabilité, pistes de transporteurs, points d'attention) est offerte et sans engagement.",
+      "Je peux rechercher dans mon réseau et auprès de professionnels correspondant aux caractéristiques de votre flux.",
   },
   {
-    question: "Travaillez-vous avec les petites structures ou seulement les grands comptes ?",
+    question: "Pouvez-vous effectuer mon dédouanement ?",
     answer:
-      "Nous accompagnons aussi bien des PME et e-commerçants qui démarrent un premier flux que des importateurs-exportateurs avec des trafics réguliers.",
+      "Les opérations réglementées de dédouanement sont réalisées par les professionnels habilités. Je peux en revanche vous aider à identifier le bon interlocuteur et à préparer votre dossier avec lui.",
   },
   {
-    question: "Sous quel délai ai-je une réponse après ma demande ?",
+    question: "Travaillez-vous uniquement avec des flux importants ?",
     answer:
-      "Nous revenons vers vous sous 48h ouvrées avec un premier retour concret sur votre demande.",
+      "Non. Les besoins ponctuels, premiers envois et petits volumes peuvent également être étudiés.",
   },
   {
-    question: "Mes informations commerciales restent-elles confidentielles ?",
+    question: "Combien coûte votre accompagnement ?",
     answer:
-      "Oui. Les informations que vous nous transmettez servent uniquement à traiter votre demande et ne sont jamais partagées ou revendues à des tiers.",
+      "Le premier échange permet d'abord d'évaluer le besoin. Si un accompagnement est nécessaire, son périmètre et son tarif sont définis avant de commencer.",
   },
 ];
 

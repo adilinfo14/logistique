@@ -3,10 +3,11 @@
 import { useState, type FormEvent } from "react";
 import { CheckCircle2, Loader2, ArrowRight, BadgeCheck } from "lucide-react";
 
-const REASSURANCE = [
-  "Premier diagnostic offert",
-  "Réponse sous 48h ouvrées",
-  "Sans engagement",
+const CE_QUE_JE_REGARDE = [
+  "La faisabilité de votre flux",
+  "Les professionnels qu'il faudra probablement solliciter",
+  "Les principales étapes",
+  "Les points à vérifier avant de lancer l'expédition",
 ];
 
 type Status = "idle" | "loading" | "success" | "error";
@@ -41,25 +42,28 @@ export default function LeadForm() {
         <div className="flex flex-col gap-6 lg:sticky lg:top-28">
           <span className="inline-flex w-fit items-center gap-2 rounded-full bg-accent-100 px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.18em] text-accent-700">
             <BadgeCheck className="h-3.5 w-3.5" />
-            Offre de démarrage
+            Premier échange offert
           </span>
           <h2 className="font-display text-3xl font-semibold tracking-tight text-navy-900 sm:text-4xl">
-            Faites analyser votre prochain flux France–Maroc
+            Vous avez une opération France–Maroc en préparation ?
           </h2>
           <p className="max-w-md text-base leading-relaxed text-navy-600 sm:text-lg">
-            Décrivez-nous votre besoin en 2 minutes. Nous revenons vers vous avec un diagnostic
-            concret : faisabilité, pistes de transporteurs et points d&apos;attention
-            documentaires.
+            Décrivez-moi simplement votre besoin. Je regarde avec vous :
           </p>
 
           <ul className="flex flex-col gap-3">
-            {REASSURANCE.map((item) => (
+            {CE_QUE_JE_REGARDE.map((item) => (
               <li key={item} className="flex items-center gap-2.5 text-sm font-medium text-navy-800">
                 <CheckCircle2 className="h-5 w-5 shrink-0 text-accent-500" />
                 {item}
               </li>
             ))}
           </ul>
+
+          <p className="max-w-md text-sm leading-relaxed text-navy-500">
+            L&apos;objectif est d&apos;abord de comprendre votre dossier et de voir si je peux
+            réellement vous être utile.
+          </p>
         </div>
 
         <div className="rounded-2xl border border-navy-900/8 bg-white p-6 shadow-card sm:p-8">
@@ -68,64 +72,98 @@ export default function LeadForm() {
           ) : (
             <form onSubmit={handleSubmit} className="flex flex-col gap-5">
               <div className="grid grid-cols-1 gap-5 sm:grid-cols-2">
+                <Field label="Ville / pays de départ" htmlFor="depart">
+                  <input
+                    id="depart"
+                    name="depart"
+                    required
+                    placeholder="Ex : Lyon, France"
+                    className={inputClass}
+                  />
+                </Field>
+                <Field label="Ville / pays de destination" htmlFor="destination">
+                  <input
+                    id="destination"
+                    name="destination"
+                    required
+                    placeholder="Ex : Casablanca, Maroc"
+                    className={inputClass}
+                  />
+                </Field>
+              </div>
+
+              <div className="grid grid-cols-1 gap-5 sm:grid-cols-2">
                 <Field label="Type de marchandise" htmlFor="marchandise">
                   <input
                     id="marchandise"
                     name="marchandise"
                     required
-                    placeholder="Ex : pièces automobiles, textile, agroalimentaire…"
+                    placeholder="Ex : pièces automobiles, textile…"
                     className={inputClass}
                   />
                 </Field>
-
                 <Field label="Volume approximatif" htmlFor="volume">
                   <input
                     id="volume"
                     name="volume"
                     required
-                    placeholder="Ex : 2 palettes, 1 conteneur 20 pieds…"
+                    placeholder="Ex : 2 palettes"
                     className={inputClass}
                   />
                 </Field>
               </div>
 
               <div className="grid grid-cols-1 gap-5 sm:grid-cols-2">
-                <Field label="Fréquence" htmlFor="frequence">
-                  <select id="frequence" name="frequence" required className={inputClass} defaultValue="">
-                    <option value="" disabled>
-                      Sélectionnez…
-                    </option>
-                    <option value="ponctuel">Ponctuel (envoi unique)</option>
-                    <option value="mensuel">Mensuel</option>
-                    <option value="hebdomadaire">Hebdomadaire</option>
-                    <option value="regulier">Régulier / récurrent</option>
-                  </select>
+                <Field label="Poids approximatif" htmlFor="poids">
+                  <input id="poids" name="poids" placeholder="Ex : 300 kg" className={inputClass} />
                 </Field>
-
-                <Field label="Sens du flux" htmlFor="sens">
-                  <select id="sens" name="sens" required className={inputClass} defaultValue="">
-                    <option value="" disabled>
-                      Sélectionnez…
-                    </option>
-                    <option value="france-maroc">France → Maroc</option>
-                    <option value="maroc-france">Maroc → France</option>
-                    <option value="les-deux">Les deux sens</option>
-                  </select>
+                <Field label="Date souhaitée" htmlFor="date_souhaitee">
+                  <input id="date_souhaitee" name="date_souhaitee" type="date" className={inputClass} />
                 </Field>
               </div>
+
+              <Field label="Flux ponctuel ou régulier" htmlFor="frequence">
+                <select id="frequence" name="frequence" required className={inputClass} defaultValue="">
+                  <option value="" disabled>
+                    Sélectionnez…
+                  </option>
+                  <option value="ponctuel">Ponctuel</option>
+                  <option value="regulier">Régulier</option>
+                </select>
+              </Field>
+
+              <Field label="Décrivez simplement ce que vous cherchez à faire" htmlFor="description">
+                <textarea
+                  id="description"
+                  name="description"
+                  rows={4}
+                  placeholder="Exemple : Je dois envoyer deux palettes de matériel depuis Lyon vers Casablanca avant le 15 octobre et je ne sais pas encore quel type de transport choisir."
+                  className={inputClass}
+                />
+              </Field>
 
               <div className="h-px w-full bg-navy-900/8" />
 
               <div className="grid grid-cols-1 gap-5 sm:grid-cols-2">
-                <Field label="Nom et prénom" htmlFor="nom">
+                <Field label="Nom" htmlFor="nom">
                   <input id="nom" name="nom" required autoComplete="name" className={inputClass} />
                 </Field>
-                <Field label="Entreprise" htmlFor="entreprise">
+                <Field label="Société" htmlFor="entreprise">
                   <input id="entreprise" name="entreprise" required autoComplete="organization" className={inputClass} />
                 </Field>
               </div>
 
               <div className="grid grid-cols-1 gap-5 sm:grid-cols-2">
+                <Field label="Téléphone / WhatsApp" htmlFor="telephone">
+                  <input
+                    id="telephone"
+                    name="telephone"
+                    type="tel"
+                    required
+                    autoComplete="tel"
+                    className={inputClass}
+                  />
+                </Field>
                 <Field label="Email" htmlFor="email">
                   <input
                     id="email"
@@ -133,16 +171,6 @@ export default function LeadForm() {
                     type="email"
                     required
                     autoComplete="email"
-                    className={inputClass}
-                  />
-                </Field>
-                <Field label="Téléphone" htmlFor="telephone">
-                  <input
-                    id="telephone"
-                    name="telephone"
-                    type="tel"
-                    required
-                    autoComplete="tel"
                     className={inputClass}
                   />
                 </Field>
@@ -168,13 +196,12 @@ export default function LeadForm() {
 
               {status === "error" && (
                 <p className="text-sm font-medium text-red-600">
-                  Une erreur est survenue. Vous pouvez aussi nous écrire directement sur WhatsApp.
+                  Une erreur est survenue. Vous pouvez aussi m&apos;écrire directement sur WhatsApp.
                 </p>
               )}
 
               <p className="text-xs text-navy-400">
-                Vos données servent uniquement à traiter votre demande et ne sont jamais
-                revendues.
+                Vos données servent uniquement à traiter votre demande et ne sont jamais revendues.
               </p>
             </form>
           )}
@@ -214,7 +241,7 @@ function SuccessState({ onReset }: { onReset: () => void }) {
       </span>
       <h3 className="font-display text-xl font-semibold text-navy-900">Demande bien reçue</h3>
       <p className="text-sm leading-relaxed text-navy-600">
-        Merci, nous revenons vers vous sous 48h ouvrées avec un premier diagnostic de votre flux.
+        Merci, je reviens vers vous rapidement pour un premier échange sur votre dossier.
       </p>
       <button
         type="button"

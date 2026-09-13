@@ -1,30 +1,30 @@
-import { Users, MapPinned, Scale, HeadphonesIcon } from "lucide-react";
+import { MapPinned, Search, TrendingUp, HeadphonesIcon } from "lucide-react";
 import SectionHeading from "./SectionHeading";
 
 const POINTS = [
   {
     icon: MapPinned,
-    title: "Une double culture terrain",
+    title: "Une approche terrain",
     description:
-      "Une connaissance concrète des pratiques de transport et de douane des deux côtés de la Méditerranée, pas seulement de la théorie.",
+      "Je viens de l'univers du transport et de la logistique. Mon objectif est de partir de votre problème concret, pas de vous vendre une solution standard.",
   },
   {
-    icon: Users,
-    title: "Un réseau construit sur la confiance",
+    icon: Search,
+    title: "Une recherche adaptée à votre dossier",
     description:
-      "Des transporteurs et partenaires sélectionnés au fil des collaborations, pas au premier annuaire venu.",
+      "Chaque flux est différent. Le bon prestataire pour une palette Lyon–Casablanca n'est pas forcément le bon pour un produit alimentaire, une urgence ou un conteneur.",
   },
   {
-    icon: Scale,
-    title: "Aucun conflit d'intérêt",
+    icon: TrendingUp,
+    title: "Un réseau qui se construit et se qualifie",
     description:
-      "Sans camions ni flotte à remplir, nous choisissons le transporteur le plus adapté à vous, pas le plus pratique pour nous.",
+      "Je développe progressivement un réseau de professionnels en France et au Maroc en fonction des besoins rencontrés et des collaborations réalisées.",
   },
   {
     icon: HeadphonesIcon,
-    title: "Un accompagnement personnalisé",
+    title: "Un interlocuteur accessible",
     description:
-      "Un interlocuteur unique qui connaît votre dossier, du premier échange jusqu'à la livraison.",
+      "Vous savez avec qui vous échangez et vous pouvez revenir vers la même personne lorsque votre besoin évolue.",
   },
 ];
 
@@ -33,8 +33,8 @@ export default function Differentiation() {
     <section className="bg-navy-900 py-20 sm:py-24">
       <div className="section flex flex-col gap-12">
         <SectionHeading
-          kicker="Pourquoi nous"
-          title="La proximité d'un réseau, la rigueur d'un accompagnement"
+          kicker="Pourquoi moi"
+          title="Un interlocuteur pour vous aider à y voir clair"
           light
         />
 

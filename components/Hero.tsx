@@ -1,10 +1,10 @@
-import { ArrowRight, MessageCircle, ShieldCheck, Clock3, Network } from "lucide-react";
+import { ArrowRight, MessageCircle, ShieldCheck, Clock3, MapPin } from "lucide-react";
 import { whatsappHref } from "@/lib/site-config";
 
 const TRUST_POINTS = [
-  { icon: Clock3, label: "Réponse sous 48h" },
-  { icon: Network, label: "Réseau de transporteurs vérifiés" },
-  { icon: ShieldCheck, label: "Aucune opération réglementée effectuée par nos soins" },
+  { icon: ShieldCheck, label: "Premier échange sans engagement" },
+  { icon: Clock3, label: "Réponse rapide" },
+  { icon: MapPin, label: "Accompagnement France ↔ Maroc" },
 ];
 
 export default function Hero() {
@@ -27,13 +27,15 @@ export default function Hero() {
           </span>
 
           <h1 className="font-display text-4xl font-bold leading-[1.1] text-white sm:text-5xl lg:text-[3.4rem]">
-            Votre relais logistique entre la France et le Maroc
+            Vous avez un flux entre la France et le Maroc ?
+            <br />
+            Je vous aide à trouver la bonne façon de le gérer.
           </h1>
 
           <p className="max-w-xl text-lg text-navy-200 sm:text-xl">
-            Nous analysons vos flux, trouvons le bon transporteur, sécurisons vos documents
-            import-export et suivons votre expédition — pour que vous n&apos;ayez qu&apos;un
-            seul interlocuteur, sans jamais gérer vous-même le transport.
+            Transport, documents, douane, interlocuteurs : je vous aide à clarifier votre besoin,
+            identifier les bons professionnels et avancer avec une solution adaptée à votre
+            situation.
           </p>
 
           <div className="flex flex-col gap-3 sm:flex-row">
@@ -51,7 +53,7 @@ export default function Hero() {
               className="inline-flex items-center justify-center gap-2 rounded-lg border border-white/20 bg-white/5 px-6 py-3.5 text-base font-semibold text-white transition-colors hover:bg-white/10"
             >
               <MessageCircle className="h-5 w-5" />
-              Discuter sur WhatsApp
+              Me parler de mon besoin sur WhatsApp
             </a>
           </div>
 

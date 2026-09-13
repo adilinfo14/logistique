@@ -1,26 +1,27 @@
-import { ClipboardList, SearchCheck, FileStack, PackageCheck, ArrowRight } from "lucide-react";
+import { ClipboardList, SearchCheck, Users, PackageCheck, ArrowRight } from "lucide-react";
 import SectionHeading from "./SectionHeading";
 
 const STEPS = [
   {
     icon: ClipboardList,
-    title: "Vous décrivez votre flux",
-    description: "Marchandise, volume, fréquence et sens du trafic via notre formulaire ou WhatsApp.",
+    title: "Vous m'expliquez ce que vous devez faire",
+    description:
+      "Par exemple : « J'ai deux palettes de pièces automobiles à envoyer de Lyon à Casablanca. » ou « Je souhaite importer des produits marocains en France et je ne sais pas comment organiser le transport. »",
   },
   {
     icon: SearchCheck,
-    title: "Diagnostic personnalisé",
-    description: "Nous étudions votre besoin et revenons vers vous sous 48h avec les options possibles.",
+    title: "Je regarde avec vous les contraintes du dossier",
+    description: "Marchandise, volume, délais, départ, destination, documents disponibles et éventuelles contraintes particulières.",
   },
   {
-    icon: FileStack,
-    title: "Mise en relation & documents",
-    description: "Transporteur adapté identifié et dossier documentaire import-export préparé avec vous.",
+    icon: Users,
+    title: "J'identifie les interlocuteurs nécessaires",
+    description: "Selon le dossier : transporteur, transitaire, douane, stockage, livraison locale ou autre spécialiste.",
   },
   {
     icon: PackageCheck,
-    title: "Suivi jusqu'à livraison",
-    description: "Nous coordonnons les intervenants et vous tenons informé jusqu'à réception.",
+    title: "Vous disposez d'une solution claire pour avancer",
+    description: "Vous savez quels professionnels solliciter, quels documents préparer et quelles étapes suivre.",
   },
 ];
 
@@ -30,7 +31,7 @@ export default function HowItWorks() {
       <div className="section flex flex-col gap-12">
         <SectionHeading
           kicker="Comment ça marche"
-          title="Quatre étapes, un seul interlocuteur"
+          title="Vous me décrivez votre besoin. On commence par là."
         />
 
         <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
