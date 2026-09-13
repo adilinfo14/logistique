@@ -14,10 +14,8 @@ export const siteConfig = {
   address: "France & Maroc", // TODO: préciser les villes si besoin (ex: Lyon / Casablanca)
   linkedin: "", // TODO: URL LinkedIn si disponible
   // Accès au cockpit interne (outil de gestion des dossiers/prestataires).
-  // TODO: remplacer par l'URL définitive une fois le cockpit déployé de façon permanente
-  // (actuellement un tunnel Cloudflare temporaire vers la machine locale — casse si le
-  // tunnel ou la machine s'arrête).
-  cockpitUrl: "https://consumer-front-rescue-interstate.trycloudflare.com/login",
+  // Déployé en permanence sur le même domaine (voir /login côté nginx).
+  cockpitUrl: "/login",
 };
 
 export const whatsappHref = (message?: string) => {
