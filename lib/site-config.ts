@@ -4,7 +4,7 @@
 export const siteConfig = {
   brand: "LogiRelais",
   tagline: "Votre relais logistique entre la France et le Maroc",
-  url: "https://www.logirelais.fr", // TODO: remplacer par le domaine réel
+  url: "https://logistique.noschoixpourvous.com",
   email: "contact@logirelais.fr", // TODO
   phone: "+33 6 00 00 00 00", // TODO
   // Numéro WhatsApp au format international, sans "+" ni espaces (ex: 33612345678)
