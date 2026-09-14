@@ -42,9 +42,9 @@ export default function Differentiation() {
           {POINTS.map(({ icon: Icon, title, description }) => (
             <div
               key={title}
-              className="flex gap-4 rounded-2xl border border-white/10 bg-white/[0.04] p-6"
+              className="flex gap-4 rounded-3xl border border-white/10 bg-white/[0.04] p-6"
             >
-              <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-accent-500/15 text-accent-300">
+              <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-2xl bg-accent-500/15 text-accent-300">
                 <Icon className="h-5 w-5" />
               </span>
               <div className="flex flex-col gap-1.5">

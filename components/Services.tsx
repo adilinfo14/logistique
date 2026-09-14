@@ -42,9 +42,9 @@ export default function Services() {
           {SERVICES.map(({ icon: Icon, title, description }) => (
             <div
               key={title}
-              className="group flex flex-col gap-4 rounded-2xl border border-navy-900/8 bg-white p-6 shadow-card transition-shadow hover:shadow-card-hover"
+              className="group flex flex-col gap-4 rounded-3xl border border-navy-900/8 bg-white p-6 shadow-card transition-shadow hover:shadow-card-hover"
             >
-              <span className="flex h-11 w-11 items-center justify-center rounded-xl bg-navy-900 text-accent-300 transition-colors group-hover:bg-accent-500 group-hover:text-white">
+              <span className="flex h-11 w-11 items-center justify-center rounded-2xl bg-navy-900 text-accent-300 transition-colors group-hover:bg-accent-500 group-hover:text-white">
                 <Icon className="h-5 w-5" />
               </span>
               <h3 className="font-display text-lg font-semibold text-navy-900">{title}</h3>

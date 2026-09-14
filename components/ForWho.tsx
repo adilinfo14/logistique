@@ -42,9 +42,9 @@ export default function ForWho() {
           {TARGETS.map(({ icon: Icon, title, description }) => (
             <div
               key={title}
-              className="flex flex-col gap-4 rounded-2xl bg-white p-7 shadow-card"
+              className="flex flex-col gap-4 rounded-3xl bg-white p-7 shadow-card"
             >
-              <span className="flex h-12 w-12 items-center justify-center rounded-xl bg-accent-50 text-accent-600">
+              <span className="flex h-12 w-12 items-center justify-center rounded-2xl bg-accent-50 text-accent-600">
                 <Icon className="h-6 w-6" />
               </span>
               <h3 className="font-display text-xl font-semibold text-navy-900">{title}</h3>

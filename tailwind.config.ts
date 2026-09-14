@@ -45,6 +45,8 @@ const config: Config = {
       backgroundImage: {
         "grid-pattern":
           "linear-gradient(to right, rgba(255,255,255,0.06) 1px, transparent 1px), linear-gradient(to bottom, rgba(255,255,255,0.06) 1px, transparent 1px)",
+        "route-pattern":
+          "repeating-linear-gradient(135deg, rgba(255,255,255,0.07) 0px, rgba(255,255,255,0.07) 10px, transparent 10px, transparent 28px)",
       },
     },
   },

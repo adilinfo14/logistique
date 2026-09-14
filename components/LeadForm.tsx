@@ -66,7 +66,7 @@ export default function LeadForm() {
           </p>
         </div>
 
-        <div className="rounded-2xl border border-navy-900/8 bg-white p-6 shadow-card sm:p-8">
+        <div className="rounded-[2rem] border border-navy-900/8 bg-white p-6 shadow-card sm:p-8">
           {status === "success" ? (
             <SuccessState onReset={() => setStatus("idle")} />
           ) : (
@@ -179,7 +179,7 @@ export default function LeadForm() {
               <button
                 type="submit"
                 disabled={status === "loading"}
-                className="mt-2 inline-flex items-center justify-center gap-2 rounded-lg bg-accent-500 px-6 py-3.5 text-base font-semibold text-white shadow-card transition-colors hover:bg-accent-600 disabled:opacity-70"
+                className="mt-2 inline-flex items-center justify-center gap-2 rounded-full bg-accent-500 px-6 py-3.5 text-base font-semibold text-white shadow-card transition-colors hover:bg-accent-600 disabled:opacity-70"
               >
                 {status === "loading" ? (
                   <>
@@ -212,7 +212,7 @@ export default function LeadForm() {
 }
 
 const inputClass =
-  "w-full rounded-lg border border-navy-900/12 bg-white px-3.5 py-2.5 text-sm text-navy-900 placeholder:text-navy-400 outline-none transition-colors focus:border-accent-500 focus:ring-2 focus:ring-accent-500/20";
+  "w-full rounded-xl border border-navy-900/12 bg-white px-3.5 py-2.5 text-sm text-navy-900 placeholder:text-navy-400 outline-none transition-colors focus:border-accent-500 focus:ring-2 focus:ring-accent-500/20";
 
 function Field({
   label,

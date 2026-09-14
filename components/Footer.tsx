@@ -10,7 +10,7 @@ export default function Footer() {
         <div className="flex flex-col gap-8 sm:flex-row sm:items-start sm:justify-between">
           <div className="flex max-w-sm flex-col gap-3">
             <span className="flex items-center gap-2 font-display text-lg font-bold text-white">
-              <span className="flex h-8 w-8 items-center justify-center rounded-lg bg-accent-500 text-sm font-bold text-navy-950">
+              <span className="flex h-8 w-8 items-center justify-center rounded-xl bg-accent-500 text-sm font-bold text-navy-950">
                 LR
               </span>
               {siteConfig.brand}

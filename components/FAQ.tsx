@@ -45,7 +45,7 @@ export default function FAQ() {
       <div className="section flex flex-col gap-12">
         <SectionHeading kicker="Questions fréquentes" title="Ce que vous devez savoir avant de démarrer" />
 
-        <div className="mx-auto flex w-full max-w-3xl flex-col divide-y divide-navy-900/8 rounded-2xl border border-navy-900/8">
+        <div className="mx-auto flex w-full max-w-3xl flex-col divide-y divide-navy-900/8 rounded-[2rem] border border-navy-900/8">
           {FAQS.map((item, index) => {
             const isOpen = openIndex === index;
             return (

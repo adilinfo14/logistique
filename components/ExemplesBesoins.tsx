@@ -29,7 +29,7 @@ export default function ExemplesBesoins() {
 
         <div className="grid grid-cols-1 gap-5 sm:grid-cols-2">
           {EXEMPLES.map(({ citation, reponse }) => (
-            <div key={citation} className="flex flex-col gap-4 rounded-2xl bg-white p-6 shadow-card">
+            <div key={citation} className="flex flex-col gap-4 rounded-3xl bg-white p-6 shadow-card">
               <div className="flex items-start gap-3">
                 <Quote className="mt-0.5 h-5 w-5 shrink-0 text-navy-300" />
                 <p className="font-display text-base font-semibold italic text-navy-900">

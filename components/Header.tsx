@@ -18,7 +18,7 @@ export default function Header() {
     <header className="sticky top-0 z-50 border-b border-navy-900/5 bg-white/90 backdrop-blur-md">
       <div className="section flex h-16 items-center justify-between sm:h-20">
         <a href="#top" className="flex items-center gap-2 font-display text-lg font-bold text-navy-900">
-          <span className="flex h-8 w-8 items-center justify-center rounded-lg bg-navy-900 text-sm font-bold text-accent-300">
+          <span className="flex h-8 w-8 items-center justify-center rounded-xl bg-navy-900 text-sm font-bold text-accent-300">
             LR
           </span>
           {siteConfig.brand}
@@ -48,7 +48,7 @@ export default function Header() {
           </a>
           <a
             href="#contact"
-            className="inline-flex items-center gap-2 rounded-lg bg-accent-500 px-4 py-2.5 text-sm font-semibold text-white shadow-card transition-colors hover:bg-accent-600"
+            className="inline-flex items-center gap-2 rounded-full bg-accent-500 px-4 py-2.5 text-sm font-semibold text-white shadow-card transition-colors hover:bg-accent-600"
           >
             Étudier mon prochain envoi
             <ArrowRight className="h-4 w-4" />
@@ -58,7 +58,7 @@ export default function Header() {
         <button
           type="button"
           onClick={() => setOpen((v) => !v)}
-          className="flex h-10 w-10 items-center justify-center rounded-lg text-navy-900 lg:hidden"
+          className="flex h-10 w-10 items-center justify-center rounded-xl text-navy-900 lg:hidden"
           aria-label="Ouvrir le menu"
           aria-expanded={open}
         >
@@ -74,7 +74,7 @@ export default function Header() {
                 key={link.href}
                 href={link.href}
                 onClick={() => setOpen(false)}
-                className="rounded-lg px-3 py-3 text-base font-medium text-navy-800 hover:bg-navy-50"
+                className="rounded-xl px-3 py-3 text-base font-medium text-navy-800 hover:bg-navy-50"
               >
                 {link.label}
               </a>
@@ -82,7 +82,7 @@ export default function Header() {
             <a
               href="#contact"
               onClick={() => setOpen(false)}
-              className="mt-2 inline-flex items-center justify-center gap-2 rounded-lg bg-accent-500 px-4 py-3 text-base font-semibold text-white"
+              className="mt-2 inline-flex items-center justify-center gap-2 rounded-full bg-accent-500 px-4 py-3 text-base font-semibold text-white"
             >
               Étudier mon prochain envoi
               <ArrowRight className="h-4 w-4" />
