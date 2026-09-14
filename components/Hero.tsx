@@ -1,11 +1,17 @@
-import { ArrowRight, MessageCircle, ShieldCheck, Clock3, MapPin } from "lucide-react";
+import { ArrowRight, MessageCircle, ShieldCheck, Clock3, MapPin, Truck, Boxes, Ship, Anchor } from "lucide-react";
 import { whatsappHref } from "@/lib/site-config";
-import { LogisticsScene } from "./illustrations";
 
 const TRUST_POINTS = [
   { icon: ShieldCheck, label: "Premier échange sans engagement" },
   { icon: Clock3, label: "Réponse rapide" },
   { icon: MapPin, label: "Accompagnement France ↔ Maroc" },
+];
+
+const CHAIN = [
+  { icon: Truck, label: "Route" },
+  { icon: Boxes, label: "Stock" },
+  { icon: Ship, label: "Maritime" },
+  { icon: Anchor, label: "Port" },
 ];
 
 export default function Hero() {
@@ -69,11 +75,34 @@ export default function Hero() {
         </div>
 
         <div className="flex flex-1 items-center justify-center">
-          <div className="relative w-full max-w-md rounded-[2.5rem_1.25rem_2.5rem_1.25rem] border border-white/10 bg-white/[0.04] p-5 shadow-2xl backdrop-blur-sm sm:p-7">
-            <LogisticsScene className="w-full" />
-            <div className="mt-4 flex items-center justify-between px-2 text-xs font-semibold uppercase tracking-wide text-navy-300">
-              <span>Port &amp; route</span>
-              <span className="text-accent-300">Votre relais, bout en bout</span>
+          <div className="relative w-full max-w-md rounded-[2.5rem_1.25rem_2.5rem_1.25rem] border border-white/10 bg-white/[0.04] p-6 shadow-2xl backdrop-blur-sm sm:p-8">
+            <div className="flex items-center justify-between px-1 text-xs font-semibold uppercase tracking-wide text-navy-300">
+              <span>France</span>
+              <span>Maroc</span>
+            </div>
+
+            <div className="relative mt-7">
+              <div
+                className="absolute left-7 right-7 top-7 border-t border-dashed border-white/20"
+                aria-hidden
+              />
+              <div className="relative flex items-start justify-between">
+                {CHAIN.map(({ icon: Icon, label }) => (
+                  <div key={label} className="flex flex-col items-center gap-2.5">
+                    <span className="flex h-14 w-14 items-center justify-center rounded-2xl bg-navy-800 text-accent-300 ring-1 ring-white/10">
+                      <Icon className="h-6 w-6" />
+                    </span>
+                    <span className="text-[11px] font-medium text-navy-200">{label}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            <div className="mt-7 flex items-center gap-2.5 rounded-2xl bg-white/5 px-4 py-3.5">
+              <ShieldCheck className="h-5 w-5 shrink-0 text-accent-400" />
+              <p className="text-sm text-navy-100">
+                Un seul interlocuteur du premier échange jusqu&apos;à la livraison.
+              </p>
             </div>
           </div>
         </div>
